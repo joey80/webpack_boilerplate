@@ -1,4 +1,4 @@
-import Accordian from '../scripts/modules/Accordian';
+import Accordian from '../scripts/modules/Accordian/Accordian';
 import '../styles/index.scss';
 
 const data = [
