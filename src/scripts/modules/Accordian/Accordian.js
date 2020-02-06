@@ -2,19 +2,22 @@ import './styles.scss';
 
 const Accordian = (() => {
   const rootNode = document.getElementById('root');
+  let _Accordian;
+
+  const appendToDOM = () => {
+    _Accordian = document.createElement('ul');
+    _Accordian.className = 'accordian__ul';
+    rootNode.appendChild(_Accordian);
+  };
 
   const buildTheAccordian = data => {
-    const ul = document.createElement('ul');
-    ul.className = 'accordian__ul';
-    rootNode.appendChild(ul);
-
     data.forEach(elm => {
       let markup = `
       <li>
         <span class='accordian__title'>${elm.title}</span>
         <span class='accordian__body'>${elm.text}</span>
       </li>`;
-      ul.insertAdjacentHTML('beforeend', markup);
+      _Accordian.insertAdjacentHTML('beforeend', markup);
     });
   };
 
@@ -35,6 +38,7 @@ const Accordian = (() => {
 
   return {
     init: data => {
+      appendToDOM();
       buildTheAccordian(data);
       setupEventListeners();
     }

@@ -1,4 +1,5 @@
 import Accordian from '../scripts/modules/Accordian/Accordian';
+import TestMod from '../scripts/modules/TestMod/TestMod';
 import '../styles/index.scss';
 
 const data = [
@@ -8,3 +9,4 @@ const data = [
 ];
 
 Accordian.init(data);
+TestMod.init();
