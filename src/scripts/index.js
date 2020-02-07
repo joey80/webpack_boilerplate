@@ -1,12 +1,4 @@
-import Accordian from '../scripts/modules/Accordian/Accordian';
-import TestMod from '../scripts/modules/TestMod/TestMod';
+import App from './modules/App/App';
 import '../styles/index.scss';
 
-const data = [
-  { title: 'This is the first title', text: 'This is some cool text man' },
-  { title: 'This is the second title', text: 'Wow this is very intersting' },
-  { title: 'This is the third title', text: 'Can you believe what youre reading?' }
-];
-
-Accordian.init(data);
-TestMod.init();
+App;

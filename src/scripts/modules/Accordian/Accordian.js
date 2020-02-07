@@ -1,25 +1,11 @@
 import './styles.scss';
 
 const Accordian = (() => {
-  const rootNode = document.getElementById('root');
-  let _Accordian;
-
-  const appendToDOM = () => {
-    _Accordian = document.createElement('ul');
-    _Accordian.className = 'accordian__ul';
-    rootNode.appendChild(_Accordian);
-  };
-
-  const buildTheAccordian = data => {
-    data.forEach(elm => {
-      let markup = `
-      <li>
-        <span class='accordian__title'>${elm.title}</span>
-        <span class='accordian__body'>${elm.text}</span>
-      </li>`;
-      _Accordian.insertAdjacentHTML('beforeend', markup);
-    });
-  };
+  const data = [
+    { title: 'This is the first title', text: 'This is some cool text man' },
+    { title: 'This is the second title', text: 'Wow this is very intersting' },
+    { title: 'This is the third title', text: 'Can you believe what youre reading?' }
+  ];
 
   const toggleAccordian = target => {
     const bodyText = target.nextElementSibling;
@@ -36,13 +22,28 @@ const Accordian = (() => {
     });
   };
 
-  return {
-    init: data => {
-      appendToDOM();
-      buildTheAccordian(data);
-      setupEventListeners();
-    }
+  const renderItems = () => {
+    return data
+      .map(
+        elm =>
+          `<li>
+            <span class='accordian__title'>${elm.title}</span>
+            <span class='accordian__body'>${elm.text}</span>
+          </li>`
+      )
+      .join('');
   };
+
+  const render = () => {
+    setupEventListeners();
+
+    return `
+    <ul class='accordian__ul'>
+      ${renderItems()}
+    </ul>`;
+  };
+
+  return render();
 })();
 
 export default Accordian;

@@ -1,7 +1,6 @@
-import TestMod2 from '../TestMod2/TestMod2';
 //import './styles.scss';
 
-const TestMod = (() => {
+const TestMod2 = (() => {
   const rootNode = document.getElementById('root');
   let _TestMod;
 
@@ -13,17 +12,22 @@ const TestMod = (() => {
 
   const buildTheThing = () => {
     let markup = `
-        <span class='test-mod__body'>HELLO WORLD</span>
-        ${TestMod2}`;
+          <span class='test-mod__body'>HELLO WORLD</span>`;
     _TestMod.insertAdjacentHTML('beforeend', markup);
   };
 
-  return {
-    init: () => {
-      appendToDOM();
-      buildTheThing();
-    }
+  const setupEventListeners = () => {
+    document.body.addEventListener('click', () => {
+      console.log('poopy butt');
+    });
   };
+
+  const render = () => {
+    setupEventListeners();
+    return `<div>JOEY is cool</div>`;
+  };
+
+  return render();
 })();
 
-export default TestMod;
+export default TestMod2;
