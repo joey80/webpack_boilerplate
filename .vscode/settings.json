@@ -1,19 +1,20 @@
 {
-  "typescript.check.tscVersion": true,
-  "workbench.colorTheme": "Monokai",
-  "window.zoomLevel": 0,
-  "workbench.iconTheme": "material-icon-theme",
+  //"javascript.implicitProjectConfig.checkJs": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "prettier.printWidth": 100,
   "prettier.semi": true,
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Default Dark+",
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#fff",
     "titleBar.inactiveForeground": "#fff",
     "titleBar.activeBackground": "#3965b1",
     "titleBar.inactiveBackground": "#3965b1"
-  }
+  },
+  "window.zoomLevel": 0
 }
