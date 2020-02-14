@@ -1,6 +1,13 @@
 $body-color: slateblue;
 
+html {
+  font-size: 10px;
+}
+
 body {
   color: $body-color;
   font-family: sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
 }

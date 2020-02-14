@@ -1,2 +1,14 @@
 .navbar {
+  box-shadow: 0 4px 20px rgba(93, 105, 247, 0.2);
+  height: 7.5rem;
+
+  &__container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline;
+  }
 }
