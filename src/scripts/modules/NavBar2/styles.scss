@@ -7,6 +7,7 @@
 
   &__container {
     display: flex;
+    height: 100%;
     justify-content: space-between;
     list-style-type: none;
     margin: 0;
@@ -15,11 +16,31 @@
   }
 
   &__item {
-    display: inline;
+    align-items: center;
+    display: flex;
+    padding: 0 2rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
     user-select: none;
 
     &:hover {
+      box-shadow: 0 4px 20px rgba(93, 105, 247, 0.2);
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &::after {
+        border-bottom: 2px solid #3bb896;
+      }
+    }
+
+    &::after {
+      border-bottom: 2px solid transparent;
+      bottom: 0;
+      content: '';
+      left: 20%;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      width: 60%;
     }
   }
 }
