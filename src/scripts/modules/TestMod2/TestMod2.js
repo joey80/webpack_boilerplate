@@ -18,7 +18,7 @@ const TestMod2 = (() => {
 
   const setupEventListeners = () => {
     document.body.addEventListener('click', () => {
-      console.log('poopy butt');
+      //console.log('poopy butt');
     });
   };
 
