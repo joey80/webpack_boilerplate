@@ -13,6 +13,33 @@
     margin: 0;
     padding: 0;
     width: 50%;
+
+    &__sub {
+      background-color: #fff;
+      box-shadow: 0 4px 20px rgba(93, 105, 247, 0.2);
+      bottom: 0;
+      height: max-content;
+      left: 0;
+      list-style-type: none;
+      margin: 0;
+      min-width: 50rem;
+      opacity: 0;
+      padding: 2rem 0 2rem 2rem;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      top: 7.5rem;
+      width: 100%;
+
+      &:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &--show {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+      }
+    }
   }
 
   &__item {
@@ -46,6 +73,10 @@
       position: absolute;
       transition: all 0.4s ease-in-out;
       width: 10%;
+    }
+
+    &__sub {
+      padding: 1rem 0;
     }
   }
 }

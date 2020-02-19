@@ -10,7 +10,13 @@ const App = (() => {
     { title: 'This is the second title', text: 'Wow this is very intersting' },
     { title: 'This is the third title', text: 'Can you believe what youre reading?' }
   ];
-  const navData = ['Products', 'How To Use', 'Historical Data', 'Indicator/EA Support'];
+  // const navData = ['Products', 'How To Use', 'Historical Data', 'Indicator/EA Support'];
+  const navData = [
+    { title: 'Products', sub: ['one', 'two', 'three'] },
+    { title: 'How To Use' },
+    { title: 'Historical Data', sub: ['four', 'five', 'six'] },
+    { title: 'Indicator/EA Support', sub: ['seven', 'eight', 'nine'] }
+  ];
 
   const appendToDOM = () => {
     _App = document.createElement('div');
