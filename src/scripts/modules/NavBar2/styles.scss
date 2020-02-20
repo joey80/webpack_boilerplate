@@ -18,25 +18,25 @@
       background-color: #fff;
       box-shadow: 0 4px 20px rgba(93, 105, 247, 0.2);
       bottom: 0;
+      display: none;
       height: max-content;
       left: 0;
       list-style-type: none;
       margin: 0;
       min-width: 50rem;
-      opacity: 0;
-      padding: 2rem 0 2rem 2rem;
+      padding: 2rem;
       position: absolute;
       transition: all 0.3s ease-in-out;
       top: 7.5rem;
       width: 100%;
 
       &:hover {
-        opacity: 1;
+        display: block;
         transition: all 0.3s ease-in-out;
       }
 
       &--show {
-        opacity: 1;
+        display: block;
         transition: all 0.3s ease-in-out;
       }
     }
@@ -76,7 +76,13 @@
     }
 
     &__sub {
-      padding: 1rem 0;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #f8f9fa;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 }
