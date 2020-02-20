@@ -9,7 +9,7 @@ export default class Accordian2 {
     return this.data
       .map(
         elm =>
-          `<li>
+          `<li class='accordian__li'>
             <span class='accordian__title'>${elm.title}</span>
             <span class='accordian__body'>${elm.text}</span>
           </li>`
