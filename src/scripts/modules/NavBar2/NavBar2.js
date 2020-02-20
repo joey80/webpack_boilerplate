@@ -1,8 +1,9 @@
 import './styles.scss';
 
 export default class NavBar2 {
-  constructor(data) {
-    this.data = data;
+  constructor(props) {
+    this.data = props.data;
+    this.className = props.className;
   }
 
   renderSubItems(subData) {
@@ -13,7 +14,7 @@ export default class NavBar2 {
     return this.data
       .map(
         elm =>
-          `<li class='navbar__item'>${elm.title}${
+          `<li class='navbar__item'><a href='#'>${elm.title}</a>${
             elm.sub
               ? `<ul class='navbar__container__sub'>${this.renderSubItems(elm.sub)}</ul></li>`
               : '</li>'
@@ -48,7 +49,7 @@ export default class NavBar2 {
     this.setupEventListeners();
 
     return `
-    <nav class='navbar'>
+    <nav class='navbar ${this.className}'>
       <ul class='navbar__container'>
       ${this.renderItems()}
       </ul>

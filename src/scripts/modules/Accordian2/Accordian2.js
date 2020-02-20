@@ -1,8 +1,9 @@
 import './styles.scss';
 
 export default class Accordian2 {
-  constructor(data) {
-    this.data = data;
+  constructor(props) {
+    this.data = props.data;
+    this.className = props.className;
   }
 
   renderItems() {
@@ -33,7 +34,7 @@ export default class Accordian2 {
     this.setupEventListeners();
 
     return `
-    <ul class='accordian__ul'>
+    <ul class='accordian__ul ${this.className}'>
       ${this.renderItems()}
     </ul>`;
   }

@@ -18,8 +18,8 @@ const App = (() => {
 
   const render = () => {
     const DOM = `
-    ${new NavBar2(navData).render()}
-    ${new Accordian2(accordianData).render()}
+    ${new NavBar2({ data: navData, className: 'demo-navbar' }).render()}
+    ${new Accordian2({ data: accordianData, className: 'demo-accordian' }).render()}
     ${TestMod2}
     `;
     rootNode.insertAdjacentHTML('beforeend', DOM);
