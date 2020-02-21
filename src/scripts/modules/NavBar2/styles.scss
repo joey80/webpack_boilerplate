@@ -60,6 +60,7 @@
 
     &:hover {
       box-shadow: 0 4px 20px rgba(93, 105, 247, 0.2);
+      color: #11634d;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
@@ -81,12 +82,15 @@
     }
 
     &__sub {
+      color: initial;
       padding: 1rem 2rem;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease-in-out;
 
       &:hover {
         background-color: #f8f9fa;
-        transition: all 0.3s ease-in-out;
+        color: #11634d;
+        padding: 1rem 2.5rem;
+        transition: all 0.2s ease-in-out;
       }
     }
   }

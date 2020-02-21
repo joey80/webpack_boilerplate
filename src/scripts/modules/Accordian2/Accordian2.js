@@ -24,8 +24,16 @@ export default class Accordian2 {
 
   setupEventListeners() {
     document.body.addEventListener('click', e => {
+      if (e.target.className === 'accordian__li') {
+        this.toggleItem(e.target.lastElementChild);
+      }
+
       if (e.target.className === 'accordian__title') {
         this.toggleItem(e.target.nextElementSibling);
+      }
+
+      if (e.target.classList.contains('accordian__body')) {
+        this.toggleItem(e.target);
       }
     });
   }

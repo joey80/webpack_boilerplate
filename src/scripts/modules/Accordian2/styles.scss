@@ -24,6 +24,10 @@
       border-bottom-left-radius: 0.7rem;
       border-bottom-right-radius: 0.7rem;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__title {

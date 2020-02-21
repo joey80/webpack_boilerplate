@@ -32,8 +32,14 @@ export default class NavBar2 {
 
     document.body.addEventListener('mouseover', e => {
       const lastNodeClass = e.target.lastChild.classList;
+      const nextSibling = e.target.nextElementSibling;
+
       if (lastNodeClass && lastNodeClass.contains('navbar__container__sub')) {
         lastNodeClass.add('navbar__container__sub--show');
+      }
+
+      if (nextSibling && nextSibling.classList.contains('navbar__container__sub')) {
+        nextSibling.classList.add('navbar__container__sub--show');
       }
     });
 
