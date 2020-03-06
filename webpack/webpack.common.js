@@ -1,5 +1,5 @@
 const Path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -19,9 +19,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin([
-      { from: Path.resolve(__dirname, '../public'), to: 'public' }
-    ]),
+    new CopyWebpackPlugin([{ from: Path.resolve(__dirname, '../public'), to: 'public' }]),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html')
     })
@@ -29,10 +27,16 @@ module.exports = {
   resolve: {
     alias: {
       '~': Path.resolve(__dirname, '../src')
-    }
+    },
+    extensions: ['.tsx', '.ts', '.js']
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.mjs$/,
         include: /node_modules/,
@@ -46,7 +50,7 @@ module.exports = {
             name: '[path][name].[ext]'
           }
         }
-      },
+      }
     ]
   }
 };
