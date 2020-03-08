@@ -13,7 +13,7 @@ const App = (() => {
     { title: 'Products', sub: ['one', 'two', 'three'] },
     { title: 'How To Use' },
     { title: 'Historical Data', sub: ['four', 'five', 'six'] },
-    { title: 'Indicator/EA Support', sub: ['seven', 'eight', 'nine'] }
+    { title: 'Indicator/EA Support', sub: ['seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'] }
   ];
 
   const render = () => {

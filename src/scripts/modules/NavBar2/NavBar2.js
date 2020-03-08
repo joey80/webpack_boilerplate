@@ -16,8 +16,8 @@ export default class NavBar2 {
         elm =>
           `<li class='navbar__item'><a href='#'>${elm.title}</a>${
             elm.sub
-              ? `<ul class='navbar__container__sub' style='min-height: ${this.data.length *
-                  25}px'>${this.renderSubItems(elm.sub)}</ul></li>`
+              ? `<ul class='navbar__container__sub' style='height: ${elm.sub.length *
+                  35}px'>${this.renderSubItems(elm.sub)}</ul></li>`
               : '</li>'
           }`
       )
