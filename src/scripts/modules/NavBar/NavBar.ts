@@ -1,6 +1,6 @@
 import './styles.scss';
 
-interface NavBar2Props {
+interface NavBarProps {
   className: string;
   data: {
     sub: Array<string>;
@@ -8,7 +8,7 @@ interface NavBar2Props {
   };
 }
 
-export default class NavBar2 {
+export default class NavBar {
   data: [
     {
       sub: Array<string>;
@@ -17,7 +17,7 @@ export default class NavBar2 {
   ];
   className: String;
 
-  constructor(props: NavBar2Props) {
+  constructor(props: NavBarProps) {
     for (let key in props) {
       this[key] = props[key];
     }

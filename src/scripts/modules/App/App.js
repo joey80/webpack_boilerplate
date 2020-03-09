@@ -1,6 +1,6 @@
 import Accordian2 from '../Accordian2/Accordian2';
 import TestMod2 from '../TestMod2/TestMod2';
-import NavBar2 from '../NavBar2/NavBar2';
+import NavBar from '../NavBar/NavBar';
 
 const App = (() => {
   const rootNode = document.getElementById('root');
@@ -18,7 +18,7 @@ const App = (() => {
 
   const render = () => {
     const DOM = `
-    ${new NavBar2({ data: navData, className: 'demo-navbar' }).render()}
+    ${new NavBar({ data: navData, className: 'demo-navbar' }).render()}
     ${new Accordian2({ data: accordianData, className: 'demo-accordian' }).render()}
     ${TestMod2}
     `;
