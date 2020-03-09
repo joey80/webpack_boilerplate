@@ -45,7 +45,7 @@ export default class NavBar2 {
     document.body.addEventListener('click', e => {
       const elm = e.target as HTMLElement;
       if (elm.className === 'navbar__item') {
-        console.log('you clicked a nav item');
+        console.log('you clicked a new nav item');
       }
     });
 
