@@ -1,6 +1,6 @@
 import './styles.scss';
 
-export default class NavBar2 {
+export default class NavBar {
   constructor(props) {
     this.data = props.data;
     this.className = props.className;

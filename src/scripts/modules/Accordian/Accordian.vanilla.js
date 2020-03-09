@@ -1,26 +1,9 @@
 import './styles.scss';
 
-interface Accordian2Props {
-  className: string;
-  data: {
-    text: string;
-    title: string;
-  };
-}
-
-export default class Accordian2 {
-  className: string;
-  data: [
-    {
-      text: string;
-      title: string;
-    }
-  ];
-
-  constructor(props: Accordian2Props) {
-    for (let key in props) {
-      this[key] = props[key];
-    }
+export default class Accordian {
+  constructor(props) {
+    this.data = props.data;
+    this.className = props.className;
   }
 
   renderItems() {
@@ -41,16 +24,15 @@ export default class Accordian2 {
 
   setupEventListeners() {
     document.body.addEventListener('click', e => {
-      const elm = e.target as HTMLElement;
-      if (elm.className === 'accordian__li') {
-        this.toggleItem(elm.lastElementChild);
+      if (e.target.className === 'accordian__li') {
+        this.toggleItem(e.target.lastElementChild);
       }
 
-      if (elm.className === 'accordian__title') {
-        this.toggleItem(elm.nextElementSibling);
+      if (e.target.className === 'accordian__title') {
+        this.toggleItem(e.target.nextElementSibling);
       }
 
-      if (elm.classList.contains('accordian__body')) {
+      if (e.target.classList.contains('accordian__body')) {
         this.toggleItem(e.target);
       }
     });
