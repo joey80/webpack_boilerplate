@@ -1,12 +1,29 @@
 import './styles.scss';
 
+interface NavBar2Props {
+  className: string;
+  data: {
+    sub: Array<string>;
+    title: string;
+  };
+}
+
 export default class NavBar2 {
-  constructor(props) {
-    this.data = props.data;
-    this.className = props.className;
+  data: [
+    {
+      sub: Array<string>;
+      title: string;
+    }
+  ];
+  className: String;
+
+  constructor(props: NavBar2Props) {
+    for (let key in props) {
+      this[key] = props[key];
+    }
   }
 
-  renderSubItems(subData) {
+  renderSubItems(subData: Array<String>) {
     return subData.map(elm => `<li class='navbar__item__sub'>${elm}</li>`).join('');
   }
 
@@ -26,14 +43,17 @@ export default class NavBar2 {
 
   setupEventListeners() {
     document.body.addEventListener('click', e => {
-      if (e.target.className === 'navbar__item') {
+      const elm = e.target as HTMLElement;
+      if (elm.className === 'navbar__item') {
         console.log('you clicked a nav item');
       }
     });
 
     document.body.addEventListener('mouseover', e => {
-      const lastNodeClass = e.target.lastChild.classList;
-      const nextSibling = e.target.nextElementSibling;
+      const elm = e.target as HTMLElement;
+      const lastNode = elm.lastChild as HTMLElement;
+      const lastNodeClass = lastNode.classList;
+      const nextSibling = elm.nextElementSibling;
 
       if (lastNodeClass && lastNodeClass.contains('navbar__container__sub')) {
         lastNodeClass.add('navbar__container__sub--show');
@@ -45,7 +65,9 @@ export default class NavBar2 {
     });
 
     document.body.addEventListener('mouseout', e => {
-      const lastNodeClass = e.target.lastChild.classList;
+      const elm = e.target as HTMLElement;
+      const lastNode = elm.lastChild as HTMLElement;
+      const lastNodeClass = lastNode.classList;
       if (lastNodeClass && lastNodeClass.contains('navbar__container__sub--show')) {
         lastNodeClass.remove('navbar__container__sub--show');
       }
