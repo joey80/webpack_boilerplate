@@ -1,5 +1,5 @@
 import Accordian2 from '../Accordian2/Accordian2';
-import TestMod2 from '../TestMod2/TestMod2.ts';
+import TestMod2 from '../TestMod2/TestMod2';
 import NavBar2 from '../NavBar2/NavBar2';
 
 const App = (() => {
